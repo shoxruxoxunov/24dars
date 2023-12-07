@@ -1,5 +1,6 @@
 const html = document.documentElement;
 const modeToggle = document.getElementById("dark-mode");
+const lightMode = document.getElementById("light-mode");
 const checkMode = localStorage.getItem("mode");
 const userForm = document.getElementById("user-form");
 let API = "https://api.github.com/users/shoxruxoxunov";
@@ -73,27 +74,28 @@ function upDataUI(data) {
 // updataUI-------------------------------------------------------------------
 
 // dark mode-----------------------------------------------------------------------------
-if (checkMode) {
-  html.classList.add(checkMode);
-  if (html.classList.contains("dark")) {
-    modeToggle.textContent = "light";
-  } else {
-    modeToggle.textContent = "dark";
-  }
+
+const modeLocal = localStorage.getItem("mode");
+if (modeLocal) {
+  html.classList.toggle("dark-mode");
+  modeToggle.classList.toggle("hidden");
+  lightMode.classList.toggle("hidden");
 }
 
-modeToggle.addEventListener("click", () => {
+const toggleModeBtn = (toggle) => {
+  modeToggle.classList.toggle("hidden");
+  lightMode.classList.toggle("hidden");
   html.classList.toggle("dark");
-  if (html.classList.contains("dark")) {
-    modeToggle.textContent = "light";
+};
 
-    localStorage.setItem("mode", "dark");
-  } else if (html.classList.contains("dark")) {
-    modeToggle.innerHTML = `<span class="fa-solid fa-sun"></span>`;
-  } else {
-    modeToggle.textContent = "dark";
-    modeToggle.innerHTML = `<span class="fa-solid fa-moon"></span>`;
-    localStorage.setItem("mode", "light");
-  }
+modeToggle.addEventListener("click", () => {
+  toggleModeBtn();
+  localStorage.setItem("mode", "dark-mode");
 });
+
+lightMode.addEventListener("click", () => {
+  toggleModeBtn();
+  localStorage.setItem("mode", "");
+});
+
 // darkmode---------------------------------------------------------------

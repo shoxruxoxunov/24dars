@@ -37,15 +37,11 @@
       >
         devfinder
       </h2>
-      <button
-        id="dark-mode"
-        class="text-[#697C9] font-sans text-xs font-bold mr-4 dark:text-white"
-      >
-        dark
-        <span class="fa-solid fa-moon"> Dark</span>
+      <button id="dark-mode">
+        <span class="fa-solid fa-sun dark:text-white"></span>
       </button>
-      <button id="light-mode" class="hidden">
-        <span class="fa-solid fa-sun"> Light</span>
+      <button id="light-mode" class="hidden dark:text-white">
+        <span class="fa-solid fa-moon"></span>
       </button>
     </header>
     <!-- Main------- -->
@@ -96,7 +92,7 @@
       </form>
     </section>
     <main
-      class="@container w-full max-w-3xl mx-auto my-auto px-10 py-10 shadow-[ 0px 16px 30px -10px rgba(70, 96, 187, 0.20)] bg-[#FEFEFE] dark:bg-[#1E2A47]"
+      class="@container w-full max-w-3xl mx-auto my-auto px-10 py-10 shadow-[ 0px 16px 30px -10px rgba(70, 96, 187, 0.20)]bg-[#FEFEFE] dark:bg-[#1E2A47]"
     >
       <section class="pt-4">
         <div class="mb-8">
@@ -153,7 +149,7 @@
         </div>
       </section>
       <section
-        class="@container max-w-3xl md:w-32 lg:w-48 ml-[220px] mb-[10px] w-16 md:w-32 lg:w-48"
+        class="@container max-w-3xl md:w-32 lg:w-48 ml-[330px] my-[-100px]"
       >
         <div class="ml-[100px]">
           <div class="">
@@ -200,16 +196,16 @@
         </div>
       </section>
       <section
-        class="@container sm:w-full sm:flex sm:flex-col md:w-full lg:w-full w-full max-w-3xl mx-auto my-auto px-10 py-10 mt-[-47px]"
+        class="@container sm:w-full sm:flex sm:flex-col max-w-3xl mx-auto my-auto px-10 py-10 mt-[100px] ml-[50px]"
       >
         <div class="flex">
-          <div class="flex m-auto">
+          <div class="flex m-auto mb-[px]">
             <img class="mr-2" src="./img/Shape.png" alt="" />
             <a id="location" href="#" class="text-[#4B6A9B;] dark:text-white"
               >San Francisco</a
             >
           </div>
-          <div class="flex">
+          <div class="flex mb-[5px]">
             <img class="mr-3" src="./img/004-twitter.svg" alt="" />
             <a id="twitter" href="#" class="dark:text-white text-[#4B6A9B;]"
               >Not Available</a
@@ -217,7 +213,7 @@
           </div>
         </div>
         <div class="flex">
-          <div class="flex m-auto">
+          <div class="flex m-auto mb-[px]">
             <img class="mr-2" src="./img/002-url.svg" alt="" />
             <a id="dom" href="#" class="text-[#4B6A9B;] dark:text-white"
               >https://github.blog</a
